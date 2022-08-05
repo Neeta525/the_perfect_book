@@ -1,6 +1,6 @@
 
 const { User } = require('../models');
-const bookSchema = require('../models/Book');
+// const bookSchema = require('../models/Book');
 const { AuthenticationError } = require('apollo-server-express');
 const {signToken} = require("../utils/auth");
 
@@ -26,7 +26,7 @@ const resolvers = {
             return { token, user };
         },
         login: async (parent, {email, password}) => {
-            const user = await User.findOne({email});
+            const user = await User.findOne({ email });
     
             if(!user) {
                 throw new AuthenticationError('Invalid Credentials')

@@ -1,4 +1,5 @@
 # the_perfect_book
+
 ## Table of Contents
 - [Description](#description)
 - [License](#license)
@@ -7,7 +8,7 @@
 - [Technologies](#technologies)
 
 ## Description
-A  
+A starter code  
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
