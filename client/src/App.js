@@ -3,25 +3,27 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
-// import { ApolloProvider } from '@apollo/client';
-import ApolloClient from 'apollo-boost';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
-const client = ApolloClient({
-  request: (operation) => {
-    const token = localStorage.getItem('id_token');
 
-    operation.setContext({
-      headers: {
-        authorization: token ? `Bearer ${token}` : "",
-      }
-    });
-  },
+const client = new ApolloClient({
   uri: '/graphql',
+  cache: new InMemoryCache(),
 });
+
+//     operation.setContext({
+//       headers: {
+//         authorization: token ? `Bearer ${token}` : "",
+//       }
+//     });
+//   },
+//   uri: '/graphql',
+// });
 
 
 function App() {
   return (
+    <ApolloProvider client={client}>
     <Router>
       <>
         <Navbar />
@@ -41,6 +43,7 @@ function App() {
         </Routes>
       </>
     </Router>
+    </ApolloProvider>
   );
 }
 
