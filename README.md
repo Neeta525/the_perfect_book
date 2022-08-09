@@ -3,6 +3,7 @@
 ## Table of Contents
 - [Description](#description)
 - [License](#license)
+- [Usage]#(#usage)
 - [Questions](#questions)
 - [Technologies](#technologies)
 
@@ -12,6 +13,8 @@ A starter code that still needs refactoring. A application meant to offer users 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+##Usage
+![screenshot](assets/booksearch.png)
 
 ## Questions
 This is my name and contact info. If you have questions, please reach out!
